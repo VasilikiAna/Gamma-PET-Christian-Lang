@@ -1,6 +1,6 @@
-# Geometry used in Christian's thesis
+# Geometry & Simulations files
 
-The files included in this branch are:
+The files included here are:
 
 - File containing the geometrical arrangement of the detectors (Geometry set-up file, MyGeoSetUpNew.geo.setup)
 - Materials file (Materials.geo)
