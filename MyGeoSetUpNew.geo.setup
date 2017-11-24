@@ -1,0 +1,229 @@
+#---------------------------------------------------------
+# Geometry setup
+
+# ----------------Global Keywords ------------------------
+
+Name MyGeoSetUp
+Version 1.0
+
+
+#SurroundingSphere 100.0  0.0  0.0  25.0  100.0
+#SurroundingSphere 20.0 0.0 0.0 0.0 20.0
+SurroundingSphere 12.0 0.0 0.0 0.0 12.0
+ShowSurroundingSphere false
+
+
+Include Materials.geo
+
+Include MyGeoNew.geo
+Include MyDetNew.det
+
+
+
+
+
+#-------------------World Volume------------------------------------------------
+
+Volume WorldVolume
+#WorldVolume.Shape BRIK 200 200 200
+#WorldVolume.Shape BRIK 20 20 20
+WorldVolume.Shape BRIK 13 13 13
+WorldVolume.Material Air
+WorldVolume.Mother 0
+WorldVolume.Color 5
+WorldVolume.Visibility 1
+
+
+Wafer.Copy Wafer1
+Wafer1.Position 3.5 0.0 0.0
+Wafer1.Mother WorldVolume
+
+
+Absorber.Copy Absorber1
+Absorber1.Position 8.0 0.0 0.0
+Absorber1.Mother WorldVolume
+
+Wafer.Copy Wafer2
+Wafer2.Position -3.5 0.0 0.0
+Wafer2.Mother WorldVolume
+
+
+Absorber.Copy Absorber2
+Absorber2.Position -8.0 0.0 0.0
+Absorber2.Mother WorldVolume
+
+
+Wafer.Copy Wafer3
+Wafer3.Position 0.0 3.5 0.0
+Wafer3.Rotation 0.0 0.0 90.0
+Wafer3.Mother WorldVolume
+
+
+Absorber.Copy Absorber3
+Absorber3.Position 0.0 8.0 0.0
+Absorber3.Rotation 0.0 0.0 90.0
+Absorber3.Mother WorldVolume
+
+
+Wafer.Copy Wafer4
+Wafer4.Position 0.0 -3.5 0.0
+Wafer4.Rotation 0.0 0.0 270.0
+Wafer4.Mother WorldVolume
+
+
+Absorber.Copy Absorber4
+Absorber4.Position 0.0 -8.0 0.0
+Absorber4.Rotation 0.0 0.0 270.0
+Absorber4.Mother WorldVolume
+
+
+
+// Defining Volumes for the Na22 SOURCES 
+
+Material Na
+Na.Density 0.968
+Na.Component Na 1.0
+
+
+Volume SourceNa22_1
+SourceNa22_1.Material Na
+SourceNa22_1.Visibility 1
+SourceNa22_1.Color 6
+SourceNa22_1.Shape SPHE 0.0 0.001 0.0 180.0 0.0 360.0
+SourceNa22_1.Position 0.1 0.05 0
+SourceNa22_1.Visibility 1
+SourceNa22_1.Mother WaterSphere
+
+
+Volume SourceNa22_2
+SourceNa22_2.Material Na
+SourceNa22_2.Visibility 1
+SourceNa22_2.Color 6
+SourceNa22_2.Shape SPHE 0.0 0.001 0.0 180.0 0.0 360.0
+SourceNa22_2.Position 0.11732 0.06 0
+SourceNa22_2.Visibility 1
+SourceNa22_2.Mother WaterSphere
+
+
+Volume SourceNa22_3
+SourceNa22_3.Material Na
+SourceNa22_3.Visibility 1
+SourceNa22_3.Color 6
+SourceNa22_3.Shape SPHE 0.0 0.001 0.0 180.0 0.0 360.0
+SourceNa22_3.Position 0.1 0.07 0
+SourceNa22_3.Visibility 1
+SourceNa22_3.Mother WaterSphere
+
+Volume SourceNa22_4
+SourceNa22_4.Material Na
+SourceNa22_4.Visibility 1
+SourceNa22_4.Color 6
+SourceNa22_4.Shape SPHE 0.0 0.001 0.0 180.0 0.0 360.0
+SourceNa22_4.Position 0.1 -0.05 0
+SourceNa22_4.Visibility 1
+SourceNa22_4.Mother WaterSphere
+
+Volume SourceNa22_5
+SourceNa22_5.Material Na
+SourceNa22_5.Visibility 1
+SourceNa22_5.Color 6
+SourceNa22_5.Shape SPHE 0.0 0.001 0.0 180.0 0.0 360.0
+SourceNa22_5.Position 0.1 -0.09 0
+SourceNa22_5.Visibility 1
+SourceNa22_5.Mother WaterSphere
+
+Volume SourceNa22_6
+SourceNa22_6.Material Na
+SourceNa22_6.Visibility 1
+SourceNa22_6.Color 6
+SourceNa22_6.Shape SPHE 0.0 0.001 0.0 180.0 0.0 360.0
+SourceNa22_6.Position 0.13464 -0.07 0
+SourceNa22_6.Visibility 1
+SourceNa22_6.Mother WaterSphere
+
+Volume SourceNa22_7
+SourceNa22_7.Material Na
+SourceNa22_7.Visibility 1
+SourceNa22_7.Color 6
+SourceNa22_7.Shape SPHE 0.0 0.001 0.0 180.0 0.0 360.0
+SourceNa22_7.Position -0.1 -0.11 0
+SourceNa22_7.Visibility 1
+SourceNa22_7.Mother WaterSphere
+
+Volume SourceNa22_8
+SourceNa22_8.Material Na
+SourceNa22_8.Visibility 1
+SourceNa22_8.Color 6
+SourceNa22_8.Shape SPHE 0.0 0.001 0.0 180.0 0.0 360.0
+SourceNa22_8.Position -0.15 -0.08 0
+SourceNa22_8.Visibility 1
+SourceNa22_8.Mother WaterSphere
+
+Volume SourceNa22_9
+SourceNa22_9.Material Na
+SourceNa22_9.Visibility 1
+SourceNa22_9.Color 6
+SourceNa22_9.Shape SPHE 0.0 0.001 0.0 180.0 0.0 360.0
+SourceNa22_9.Position -0.1 -0.05 0
+SourceNa22_9.Visibility 1
+SourceNa22_9.Mother WaterSphere
+
+
+Volume SourceNa22_10
+SourceNa22_10.Material Na
+SourceNa22_10.Visibility 1
+SourceNa22_10.Color 6
+SourceNa22_10.Shape SPHE 0.0 0.001 0.0 180.0 0.0 360.0
+SourceNa22_10.Position -0.1 0.05 0
+SourceNa22_10.Visibility 1
+SourceNa22_10.Mother WaterSphere
+
+Volume SourceNa22_11
+SourceNa22_11.Material Na
+SourceNa22_11.Visibility 1
+SourceNa22_11.Color 6
+SourceNa22_11.Shape SPHE 0.0 0.001 0.0 180.0 0.0 360.0
+SourceNa22_11.Position -0.16928 0.09 0
+SourceNa22_11.Visibility 1
+SourceNa22_11.Mother WaterSphere
+
+Volume SourceNa22_12
+SourceNa22_12.Material Na
+SourceNa22_12.Visibility 1
+SourceNa22_12.Color 6
+SourceNa22_12.Shape SPHE 0.0 0.001 0.0 180.0 0.0 360.0
+SourceNa22_12.Position -0.1 0.13 0
+SourceNa22_12.Visibility 1
+SourceNa22_12.Mother WaterSphere
+
+
+
+
+
+#Placing the Water Sphere to enclose the sources
+
+// Water Sphere for the source
+
+
+Volume WaterSphere
+WaterSphere.Material Water
+WaterSphere.Shape SPHE 0.0 3.0 0 180 0 360
+WaterSphere.Position 0.0 0.0 0.0
+WaterSphere.Visibility 1
+WaterSphere.Mother WorldVolume
+
+
+# Triggers
+
+Trigger Main1
+Main1.Veto false 
+Main1.TriggerByDetector true
+Main1.DetectorType AngerCamera 1
+Main1.DetectorType Strip2D 3
+
+
+
+
+
+
+
