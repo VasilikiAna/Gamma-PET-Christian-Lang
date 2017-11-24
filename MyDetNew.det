@@ -1,0 +1,64 @@
+
+// Si - Detector
+
+MDStrip2D                  SStrip
+SStrip.SensitiveVolume     Wafer
+SStrip.DetectorVolume      Wafer
+
+SStrip.Offset               0.0   0.0
+SStrip.StripNumber          128   128
+
+SStrip.NoiseThreshold       5   
+SStrip.TriggerThreshold     10   
+
+
+#Energy Resolution 1% (from Ingrid's Simulation)
+SStrip.EnergyResolution        Gauss 10     10    0.1
+SStrip.EnergyResolution        Gauss 20     20    0.1
+SStrip.EnergyResolution        Gauss 30     30    0.1
+SStrip.EnergyResolution        Gauss 50     50    0.1
+SStrip.EnergyResolution        Gauss 100    100   0.42
+SStrip.EnergyResolution        Gauss 511    511   2.17   ## in Christian's thesis the resolution at 511 keV is FWHM=10keV
+SStrip.EnergyResolution        Gauss 1157   1157  4.92
+SStrip.EnergyResolution        Gauss 2000   2000  8.51
+SStrip.EnergyResolution        Gauss 3000   3000  12.76 
+SStrip.EnergyResolution        Gauss 4000   4000  17.02
+
+
+
+SStrip.FailureRate 0.19
+
+// Absorber
+
+AngerCamera LaBr3Detector
+LaBr3Detector.SensitiveVolume     Absorber
+
+LaBr3Detector.Positioning         XYZ
+LaBr3Detector.PositionResolution  0    0.3
+LaBr3Detector.PositionResolution  100  0.3
+LaBr3Detector.PositionResolution  500  0.3
+LaBr3Detector.PositionResolution  1000 0.3
+LaBr3Detector.PositionResolution  2000 0.3
+LaBr3Detector.PositionResolution  3000 0.3
+LaBr3Detector.PositionResolution  4000 0.3
+LaBr3Detector.PositionResolution  5000 0.3
+
+#Energy Resolution by default 29.10.15 (Correct!!!)
+LaBr3Detector.EnergyResolution  Gauss 50    50   7.13
+LaBr3Detector.EnergyResolution  Gauss 100   100  7.60
+LaBr3Detector.EnergyResolution  Gauss 240   240  8.75
+LaBr3Detector.EnergyResolution  Gauss 500   500  10.55
+LaBr3Detector.EnergyResolution  Gauss 662   662  11.57
+LaBr3Detector.EnergyResolution  Gauss 790   790  12.30
+LaBr3Detector.EnergyResolution  Gauss 1000  1000 13.36
+LaBr3Detector.EnergyResolution  Gauss 2000  2000 17.69
+LaBr3Detector.EnergyResolution  Gauss 3000  3000 21.15
+LaBr3Detector.EnergyResolution  Gauss 4000  4000 24.11
+LaBr3Detector.EnergyResolution  Gauss 5000  5000 26.76 
+
+
+LaBr3Detector.NoiseThresholdEqualsTriggerThreshold true
+LaBr3Detector.TriggerThreshold 10
+        
+
+
