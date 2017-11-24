@@ -1,0 +1,24 @@
+Type       SIM
+Version    25
+Geometry   /project/med2/V.Anagnostatou/MEGAlib-gamma-PET/Reconstruction/MyGeoSetUpNew.geo.setup
+
+Date       2017-10-13 15:54:22
+MEGAlib    2.33.00
+
+SimulationStartAreaFarField 0.0
+BeamType Activation
+SpectralType Activation
+
+IN Na22-2mm-3Scat-1Abs-Cluster1.inc1.id1.sim
+IN Na22-2mm-3Scat-1Abs-Cluster2.inc1.id1.sim
+IN Na22-2mm-3Scat-1Abs-Cluster3.inc1.id1.sim
+IN Na22-2mm-3Scat-1Abs-Cluster4.inc1.id1.sim
+IN Na22-2mm-3Scat-1Abs-Cluster5.inc1.id1.sim
+IN Na22-2mm-3Scat-1Abs-Cluster6.inc1.id1.sim
+IN Na22-2mm-3Scat-1Abs-Cluster7.inc1.id1.sim
+IN Na22-2mm-3Scat-1Abs-Cluster8.inc1.id1.sim
+IN Na22-2mm-3Scat-1Abs-Cluster9.inc1.id1.sim
+IN Na22-2mm-3Scat-1Abs-Cluster10.inc1.id1.sim
+IN Na22-2mm-3Scat-1Abs-Cluster11.inc1.id1.sim
+IN Na22-2mm-3Scat-1Abs-Cluster12.inc1.id1.sim
+EN
