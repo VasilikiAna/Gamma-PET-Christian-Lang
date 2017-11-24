@@ -12,4 +12,4 @@ The following header & source files of the MEGAlib software had been editted:
 - MImagerExternallyManaged.cxx
 - MBackprojectionSphere.cxx
 
-The Analysis code that Christian used for his reconstruction was published in his thesis as a pdf file & I copied-pasted it in the AnalysisCode.cxx file
+The Analysis code that Christian used for his reconstruction was published in his thesis as a pdf file & I copied-pasted it in the AnalysisCode.cxx file. This code has some compilation errors which I correct in the branch.
